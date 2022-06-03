@@ -7,12 +7,14 @@ const index = (req, res) => {
       
     res.render('managementCategory/index', {
         productData: frutas,
-        layout: false
+        layout: 'main'
     });
 }
 
 function create(req, res) {
-    res.render("managementCategory/create");
+    res.render("managementCategory/create",{
+        layout : 'main'
+    });
     // if(req.route.methods.get){
     //     res.render("managementCategory/create");
     // }else{
@@ -30,7 +32,7 @@ const update = (req, res) => {
     if(req.route.methods.get){
         res.render("managementCategory/update", {
             id: idCategory,
-            layout:false
+            layout: 'main'
         });
     }else{
         ///

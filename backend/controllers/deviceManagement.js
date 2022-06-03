@@ -7,12 +7,14 @@ const index = (req, res) => {
     produto =[1,"Bicicleta", "Transporte", 455,50, 1111234];
     res.render('deviceManagement/index', {
         productData: produto,
-        layout: false
+        layout: 'main'
     });
 }
 
 function create(req, res) {
-    res.render("deviceManagement/create");
+    res.render("deviceManagement/create", {
+        layout : "main"
+    });
     // if(req.route.methods.get){
     //     res.render("deviceManagement/create");
     // }else{
@@ -33,7 +35,7 @@ const update = (req, res) => {
     if(req.route.methods.get){
         res.render("deviceManagement/update", {
             id:  idCategory,
-            layout:false
+            layout : 'main'
         });
     }else{
     }
